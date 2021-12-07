@@ -1,0 +1,72 @@
+{% load i18n %}
+{{ user.first_name }},
+
+<p>
+  Welcome to your membership at Office Nomads!
+</p>
+
+<p>
+  We’re so glad to have you on board. To get you started,
+  we have some administrative items and some community items for you:
+</p>
+
+<strong>Administrative items:</strong>
+<li>
+  Please sign and return the Office Nomads Membership
+  Agreement (sent in a separate email).
+</li>
+<li>
+  Your membership will renew each month on the {{ membership.start_date|date:"jS" }}.
+  If you want to make any changes to your membership, we ask that you give us at
+  least one full business day's notice.
+</li>
+<li>
+  Please <a href="{% url 'member:profile:redirect' %}">log into Nadine</a>,
+  our member management system. Once you’re in, complete these steps:
+  <ul>
+    <li>Fill out your profile. You can add tags to your profile to identify your interests.</li>
+    <li>Enter a payment method for us to use for your monthly membership.
+      Email receipts will go to the primary email address on file in Nadine.</li>
+    <li>Poke around a bit! Explore the member pages, FAQs, and check out events
+      coming up at Office Nomads on the event calendar. </li>
+  </ul>
+</li>
+
+<strong>Community items:</strong>
+<li>
+  You should have received an invitation to join the Office Nomads Slack.
+  Please jump in and explore. If for some reason you don’t receive an invitation,
+  please get in touch with us.
+</li>
+<li>
+  Introduce yourself! It’d be great to learn more about you. Pop a little bit
+  about yourself onto the #general board on Slack. Be sure to talk about more
+  than just what you do for work – we want to know what makes you tick and what
+  kinds of things you like doing when you’re not busy at a computer.
+</li>
+<li>
+  Attend an event. Each week there are virtual and in-person events designed to
+  help us get to know each other, get things done, relax, and more.
+</li>
+<li>
+  Enjoy some 1:1s. We have a great channel in Slack called #pair-buddies where
+  you will get randomly paired with another member. Your mission for the week is
+  simply to chat with each other for 20 minutes! It can happen over the phone,
+  through a video call, or even by meeting and taking a walk if you prefer.
+</li>
+
+<p>
+  That should be a good start for now. :) If you have any questions, concerns,
+  or thoughts to share, please reach out. You can email
+  <a href="mailto:staff@officenomads.com">staff@officenomads.com</a>
+  or send me a message on Slack anytime.
+</p>
+
+<p>
+  Welcome to the Office Nomads community - we’re glad to have you here.
+</p>
+
+{{ site_url }}{% url 'member:profile:redirect' %}
+
+<p>Thanks!</p>
+The {{ site_name }} Team
